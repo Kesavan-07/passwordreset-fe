@@ -1,0 +1,58 @@
+/* Root container styles for layout and responsiveness */
+#root {
+  max-width: 1280px; /* Maximum width for the main container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 2rem; /* Add padding for spacing */
+  text-align: center; /* Center-align content */
+}
+
+/* Logo styles with hover effects */
+.logo {
+  height: 6em; /* Set logo height */
+  padding: 1.5em; /* Add padding around the logo */
+  will-change: filter; /* Optimize for animation changes */
+  transition: filter 300ms; /* Smooth hover transition */
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #9c27b0aa); /* Purple glow on hover */
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #ff5722aa); /* Orange glow for React logo hover */
+}
+
+/* Animation for spinning logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg); /* Initial state */
+  }
+  to {
+    transform: rotate(360deg); /* Full rotation */
+  }
+}
+
+/* Apply spinning animation to specific logos */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 15s linear; /* Smooth infinite spin */
+  }
+}
+
+/* Card styles for content grouping */
+.card {
+  padding: 2em; /* Add padding for spacing */
+  background: linear-gradient(to bottom, #1e1e2f, #2c2c44); /* Dark gradient background */
+  color: #f3f4f6; /* Light text for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: transform 300ms, box-shadow 300ms; /* Smooth hover transitions */
+}
+.card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Increase shadow depth on hover */
+}
+
+/* Styles for additional text or footnotes */
+.read-the-docs {
+  color: #aaaaaa; /* Subtle gray text */
+  font-style: italic; /* Italicized for differentiation */
+}
